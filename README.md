@@ -14,7 +14,11 @@ Service Setup:
   1. in each script copy, in Sign Ups.gs, run main to authorize script with necessary permissions
   2. remove the fake sign-up from the form and delete row from responses spreadsheet
   3. delete any folders in the "Matching Forms" folder
-9. pa
+
+1. A numbered list
+    1. A nested numbered list
+    2. Which is numbered
+2. Which is numbered
 
 Potential Bugs:
 * two users submit likes/dislikes for each other within 10 seconds => two scripts might simultaneously access same spreadsheet
