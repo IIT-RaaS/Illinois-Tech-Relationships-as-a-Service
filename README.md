@@ -38,4 +38,4 @@ Languages: Google Apps Script, Javascript
   * future development: implement a form execution queue (this will be extremely difficult with multiple copies of same script)
 * fail to read from serviced users spreadsheet within 30 secs
   * workaround: I expect this to be very rare, so if I get a script error, I'll delete the last user in Serviced Users spreadsheet
-and manually rerun main in Sign Ups.gs. The script will just skip that user on subsequent runs if it encounters this error
+and manually rerun main in Sign Ups.gs. The script currently skips that user on subsequent runs if it encounters this error
