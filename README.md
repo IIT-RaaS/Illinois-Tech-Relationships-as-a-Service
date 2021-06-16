@@ -15,11 +15,6 @@ Service Setup:
     2. remove the fake sign-up from the form and delete row from responses spreadsheet
     3. delete any folders in the "Matching Forms" folder
 
-1. A numbered list
-    1. A nested numbered list
-    2. Which is numbered
-2. Which is numbered
-
 Potential Bugs:
 * two users submit likes/dislikes for each other within 10 seconds => two scripts might simultaneously access same spreadsheet
   * workaround: I expect this to be very rare, so if I get a script error, I'll manually add the users back to each other's candidates lists
