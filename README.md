@@ -14,6 +14,7 @@ Service Setup:
   1. in each script copy, in Sign Ups.gs, run main to authorize script with necessary permissions
   2. remove the fake sign-up from the form and delete row from responses spreadsheet
   3. delete any folders in the "Matching Forms" folder
+9. pa
 
 Potential Bugs:
 * two users submit likes/dislikes for each other within 10 seconds => two scripts might simultaneously access same spreadsheet
