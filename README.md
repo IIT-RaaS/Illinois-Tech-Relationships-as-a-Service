@@ -5,15 +5,15 @@ Service Setup:
 1. create an alias (iitrelationships@gmail.com) for your hawk account (...@hawk.iit.edu)
 2. create two folders: "Matching Forms" and "Sign-Up Form"
 3. place sign-up form in the Sign-Up Form folder and create a spreadsheet for responses (with default name)
-  * restrict sign-up form to users of specific domain (iit.edu)
+  1. restrict sign-up form to users of specific domain (iit.edu)
 4. in the Sign-Up Form folder, create a spreadsheet titled "Serviced Users"
 5. in Retrieve Folders/Files.gs, run getFolderIdHelper, getSpreadsheetIdHelper, and getSignUpFormIdHelper and update global id variables
 6. create a copy of the script for every suspected 19 users (20 triggers per script - 1 for sign-up form)
 7. in each copy, in Triggers.gs, change the conditional in onSignUp to service 19 users
 8. create one fake sign-up
-  * in each script copy, in Sign Ups.gs, run main to authorize script with necessary permissions
-  * remove the fake sign-up from the form and delete row from responses spreadsheet
-  * delete any folders in the "Matching Forms" folder
+  1. in each script copy, in Sign Ups.gs, run main to authorize script with necessary permissions
+  2. remove the fake sign-up from the form and delete row from responses spreadsheet
+  3. delete any folders in the "Matching Forms" folder
 
 Potential Bugs:
 * two users submit likes/dislikes for each other within 10 seconds => two scripts might simultaneously access same spreadsheet
