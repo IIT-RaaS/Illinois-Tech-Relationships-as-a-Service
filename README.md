@@ -18,7 +18,7 @@ Upon matching with someone, defined as "you liking them" and "them liking you ba
 At any given time, the only people with potential to access the information you provide will be the two students at the Illinois Institute of Technology who have developed this service, and we assure you that we will not view or use this information for personal gain. We don't have the incentive to, and our putting time into setting up this service should indicate to you that we'd like to remain as trustworthy as possible to encourage its use. We will not have access to your personal messages with matches, as these will be on Discord, which encrypts all data-in-transit.
 
 ### Implementation
-Languages: Google Apps Script, Javascript
+Languages: Google Apps Script, JavaScript
 ##### Service Setup:
 1. create an alias (iitrelationships@gmail.com) for your hawk account (...@hawk.iit.edu)
 2. create two folders: "Matching Forms" and "Sign-Up Form"
