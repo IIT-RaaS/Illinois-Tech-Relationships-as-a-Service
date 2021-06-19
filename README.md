@@ -43,7 +43,7 @@ To remove a user manually from the service, you (the developer) must do each of 
 * delete the folder with the user's hawk ID in "Matching Forms"
 
 In the event of a user submitting incorrect data, remove the user entirely using the above procedure and ask them to resubmit the form
-##### Changes since version 1:
+##### Changes Since v1:
 * closed sign-up form during processing (removes potential bugs for if another user signs up during processing)
 * updated code to support deprecated Rhino interpreter (JavaScript ES5)
   * Google Apps Script has a bug in its latest runtime ⇒ if one form submit trigger attempts to create another, it will be disabled
