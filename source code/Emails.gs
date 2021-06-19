@@ -1,6 +1,5 @@
 var banner = "\n\nYours Truly,\n\tIllinois Tech Relationships as a Service"
     +"\n\nThank you for using Illinois Tech Relationships as a Service (RaaS). "
-    +"To read more information about the service and how it works, click here. "
     +"Feel free to reach out to us on Instagram @iit.relationships or email us "
     +"at iitrelationships@gmail.com with any questions or concerns.\n\n"
     +"This is an automated email generated via Google apps script. Please do not reply. "
@@ -12,7 +11,7 @@ var options = {
   };
 
 function sendWelcomeEmail(email, form) {
-  // console.log("Sending welcome email to "+email+" with form id "+form.getId());
+  console.log("Sending welcome email to "+email+" with form id "+form.getId());
 
   var url = form.getPublishedUrl();
 
@@ -33,7 +32,7 @@ function sendConfirmErrorEmail(email) {
 }
 
 function sendNewCandidatesEmail(email, form) {
-  // console.log("Sending new candidates email to "+email+" with form id "+form.getId());
+  console.log("Sending new candidates email to "+email+" with form id "+form.getId());
 
   var url = form.getPublishedUrl();
 
@@ -45,7 +44,7 @@ function sendNewCandidatesEmail(email, form) {
 }
 
 function sendMatchEmail(email, types, discord) {
-  // console.log("Emailing "+email+" discord link "+discord+" and types "+types);
+  console.log("Emailing "+email+" discord link "+discord+" and types "+types);
 
   var subject = "You Have a Match!";
   var body = "Congratulations, you have a match!\n\n"

@@ -11,6 +11,7 @@ function generateForm(id, name, types) {
       .setConfirmationMessage("Your likes and dislikes have been submitted and are being processed. "
           +"Start another submission to view more candidates.\n\nPlease note that it may take a few seconds "
           +"to finish processing your submission, and you will not have access to the form during that time.");
+  form.setRequireLogin(false);
 
   var forms_folder = DriveApp.getFolderById(folder_id); // id obtained using getFolderIdHelper()
   var user_folder = forms_folder.createFolder(id);
@@ -49,10 +50,10 @@ function modifyForm(form, types) {
     return form.getId();
   }
   
-  var i = 0
-  for (info of candidates) {
+  var i = 0;
+  candidates.some(function(info) {
     if (i == 5) // this is to ensure we only show a max of 5 candidates at a time
-      break;
+      return true;
 
     title = info[0];
     description = "Gender: "+info[1]+"\n\n"
@@ -86,7 +87,8 @@ function modifyForm(form, types) {
     */
     
     i++;
-  }
+    return false;
+  });
 
   // for (var i = 0; i < pages.length-1; i++)
   //   pages[i].setGoToPage(pages[i+1]);

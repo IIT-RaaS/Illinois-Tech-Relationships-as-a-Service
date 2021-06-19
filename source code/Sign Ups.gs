@@ -2,10 +2,10 @@ candidates = []; // temporary list of potential candidates for a user contains [
 candidate_ids = []; // temporary list of hawk ids for candidates contains [[hawk id, name], ...]
 
 function main() {
-  // console.log("Creating databases");
+  console.log("Creating databases");
   createDatabases();
 
-  // console.log("Servicing new users");
+  console.log("Servicing new users");
   serviceUsers();
   SpreadsheetApp.flush();
 
@@ -22,7 +22,7 @@ function main() {
 }
 
 function serviceUsers() {
-  for (id in unserviced) {
+  for (var id in unserviced) {
     var id_back = id;
     var index = unserviced[id];
     var user = database[index][id];
@@ -35,7 +35,7 @@ function serviceUsers() {
     if (index == 1) gender = "Female";
     if (index == 2) gender = "Nonbinary/Other";
 
-    // console.log("User: " + name);
+    console.log("User: "+name);
     addCandidates(id, interests, gender, types);
     var [folder, form] = generateForm(id, name, types); // returns [user folder id, form id]
 
@@ -53,13 +53,16 @@ function addCandidates(id, interests, gender, types) {
   candidates = [];
   candidate_ids = [];
 
-  if (interests.includes("Male"))
+  console.log("Adding male candidates");
+  if (interests.indexOf("Male") != -1)
     addCandidatesHelper(database[0], "Male", id, gender, types);
   
-  if (interests.includes("Female"))
+  console.log("Adding female candidates");
+  if (interests.indexOf("Female") != -1)
     addCandidatesHelper(database[1], "Female", id, gender, types);
   
-  if (interests.includes("Nonbinary/Other"))
+  console.log("Adding other candidates");
+  if (interests.indexOf("Nonbinary/Other") != -1)
     addCandidatesHelper(database[2], "Nonbinary/Other", id, gender, types);
   
   // printCandidates();
@@ -67,20 +70,23 @@ function addCandidates(id, interests, gender, types) {
 }
 
 function addCandidatesHelper(users, other_gender, this_id, this_gender, this_types) {
-  for (other_id in users) {
+  for (var other_id in users) {
     var other = users[other_id];
     var other_name = other[0];
     var other_interests = other[1];
     var other_types = other[2];
     var other_link = other[3];
     var other_bio = other[4];
+
+    console.log("Checking "+other_name+" with id "+other_id);
     
     if (other_id == this_id)
       continue;
     
-    if (other_interests.includes(this_gender))  // if looking for each other's genders
+    if (other_interests.indexOf(this_gender) != -1)  // if looking for each other's genders
       this_types.every(function(this_type) {
-        if (other_types.includes(this_type)) {
+        if (other_types.indexOf(this_type) != -1) {
+          console.log("Adding "+other_name+", "+other_gender+", "+other_link+", "+other_bio);
           candidates.push([other_name, other_gender, other_link, other_bio]);
           candidate_ids.push([other_id, other_name]);
           return false; // if matching relationship type, add to candidates and exit
@@ -92,6 +98,7 @@ function addCandidatesHelper(users, other_gender, this_id, this_gender, this_typ
 }
 
 function createSpreadsheets(folder, id, name, types) {
+  console.log("Creating spreadsheets");;
   var formatted = SpreadsheetApp.create(name+"'s Responses");
   var candidates = SpreadsheetApp.create(name+"'s Candidates");
   DriveApp.getFileById(formatted.getId()).moveTo(folder);
@@ -107,6 +114,7 @@ function updateCandidatesSpreadsheets(formatted, candidates, candidate, types) {
 }
 
 function updateNewUserCandidates(formatted, candidates, types) {
+  console.log("Appending candidates to "+candidates.getName());
   candidate_ids.forEach(function(id) {
     candidates.appendRow(id);
   });
@@ -120,11 +128,13 @@ function updateExistingUserCandidates(candidate) {
   candidate_ids.forEach(function(id) {
     ids_only.push(id[0]);
   });
+  console.log("Ids list: "+ids_only);
 
-  for (id in serviced)
-    if (ids_only.includes(id)) {
+  for (var id in serviced)
+    if (ids_only.indexOf(id) != -1) {
       var form = FormApp.openById(serviced[id][0]);
       var candidates = SpreadsheetApp.openById(serviced[id][2]);
+      console.log("Adding candidate to "+candidates.getName());
       candidates.appendRow(candidate);
 
       var [_, _, types, _, _, email, _, _] = searchDatabase(id);
@@ -144,6 +154,7 @@ function updateServicedIds(id, form, formatted, candidates) {
       break;
     }
 
+  console.log("Adding info to serviced index "+index);
   sheet.getActiveSheet().getRange(index, 2).setValue(form.getId());
   sheet.getActiveSheet().getRange(index, 3).setValue(formatted.getId());
   sheet.getActiveSheet().getRange(index, 4).setValue(candidates.getId());
@@ -153,11 +164,12 @@ function updateServicedIds(id, form, formatted, candidates) {
 
 function printCandidates() {
   var string = "Candidates";
-  for (candidate of candidates)
+  candidates.forEach(function (candidate) {
     string += "\nName: "+candidate[0]+"\n"
         +"Gender: "+candidate[1]+"\n"
         +"Link: "+candidate[2]+"\n"
         +"Bio: "+candidate[3]+"\n";
+  });
   
   console.log(string);
 }

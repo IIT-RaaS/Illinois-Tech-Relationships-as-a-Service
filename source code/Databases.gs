@@ -5,7 +5,7 @@ var serviced = {}; // already serviced users (with forms) contains {hawk id: [fo
 var unserviced = {}; // users to be serviced (without forms) contains {hawk id: database index, ...}
 
 function createUserDatabase() {
-  var sheet = SpreadsheetApp.openById("1CqrQW3KBCAJPln5a37iSzlJQ-khpBClg2maJJ4jwuds"); // id of responses sheet obtained using getSpreadsheetIdHelper()
+  var sheet = SpreadsheetApp.openById(responses_id); // id of responses sheet obtained using getSpreadsheetIdHelper()
   var data = sheet.getDataRange().getValues();
 
   prepareUserDatabase();
@@ -45,8 +45,8 @@ function createDatabases() {
   else
     last_serviced = data2[data2.length-1][0];
   
-  // console.log("Serviced? "+is_serviced);
-  // console.log("Last serviced: "+last_serviced);
+  console.log("Serviced? "+is_serviced);
+  console.log("Last serviced: "+last_serviced);
 
   for (var i = 1; i < data1.length; i++) {
     var row = data1[i];
@@ -99,11 +99,11 @@ function createDatabases() {
       unserviced[id] = index;
       // console.log("Added "+id+" with gender index "+index+" to unserviced");
     }
-
-    // printDatabase();
-    // printServiced();
-    // printUnserviced();
   }
+
+  printDatabase();
+  printServiced();
+  printUnserviced();
 }
 
 function prepareUserDatabase() {
@@ -141,7 +141,7 @@ function searchDatabase(id) {
 
 function printDatabase() {
   var string = "User Database:\n\nMales";
-  for (id in database[0])
+  for (var id in database[0])
     string += "\nName: "+database[0][id][0]+"\n"
         +"Interests: "+database[0][id][1]+"\n"
         +"Types: "+database[0][id][2]+"\n"
@@ -152,7 +152,7 @@ function printDatabase() {
         +"Hawk Email: "+id+"\n";
 
   string += "\nFemales";
-  for (id in database[1])
+  for (var id in database[1])
     string += "\nName: "+database[1][id][0]+"\n"
         +"Interests: "+database[1][id][1]+"\n"
         +"Types: "+database[1][id][2]+"\n"
@@ -163,7 +163,7 @@ function printDatabase() {
         +"Hawk Email: "+id+"\n";
 
   string += "\nNonbinary/Other";
-  for (id in database[2])
+  for (var id in database[2])
     string += "\nName: "+database[2][id][0]+"\n"
         +"Interests: "+database[2][id][1]+"\n"
         +"Types: "+database[2][id][2]+"\n"
@@ -178,7 +178,7 @@ function printDatabase() {
 
 function printServiced() {
   var string = "Serviced\n";
-  for (confirm in serviced)
+  for (var confirm in serviced)
     string += confirm+": "+serviced[confirm]+"\n";
   
   console.log(string);
@@ -186,7 +186,7 @@ function printServiced() {
 
 function printUnserviced() {
   var string = "Unserviced\n";
-  for (confirm in unserviced)
+  for (var confirm in unserviced)
     string += confirm+": "+unserviced[confirm]+"\n";
   
   console.log(string);

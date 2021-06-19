@@ -23,6 +23,7 @@ function clearRaw(raw, form) {
     sheet.deleteRow(i);
 }
 
+/*
 function updateFormatted() {
   var forms_folder = DriveApp.getFolderById("1H7_BqNI_zu2GbXfnNcKOunmP2etuyjl8"); // id obtained using getFolderIdHelper()
 
@@ -58,7 +59,9 @@ function formatResponses(raw, formatted, candidates) {
   createSheets(formatted);
   copyRepsonses(raw, formatted, candidates);
 }
+*/
 
+/*
 function copyRepsonses(raw, formatted, candidates) {
   var data = raw.getDataRange().getValues();
 
@@ -102,6 +105,8 @@ function processElement(name, row, i, headers, formatted, candidates) {
     i--;
   }
 }
+
+*/
 
 /* this implementation is inefficient if two candidates have the same name, but more efficient if not
  we expect two candidates having the same name to be rare */

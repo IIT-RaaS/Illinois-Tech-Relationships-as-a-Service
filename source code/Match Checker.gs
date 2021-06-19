@@ -6,11 +6,14 @@ function processFormatted(formatted, this_id) {
     var row = data[i];
     var other_id = row[0];
 
+    console.log("Checking match "+this_id+" and "+other_id);
+
     var other_formatted = getSheetFromId(other_id);
     if (checkMatch(this_id, row, formatted, other_formatted))
       rm.push(i+1);
   }
 
+  console.log("Removing unmatched");
   // we only remove from this spreadsheet at the end so loop continues properly before
   removeUnmatched(rm, formatted);
 }
@@ -44,9 +47,8 @@ function processMatch(this_row, other_row, other_index, this_formatted, other_fo
       "Serious Relationships without Sex", "Serious Relationships with Sex"];
   var types = [];
 
+  console.log("This row: "+this_row+"\nOther row: "+other_row);
   var match = false;
-  console.log("This row: " + this_row);
-  console.log("Other row: " + other_row);
   for (var i = 2; i < 6; i++)
     if (this_row[i] == "Like" && other_row[i] == "Like") {
       types.push(available_types[i-2]);
