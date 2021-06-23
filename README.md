@@ -53,7 +53,7 @@ In the event of a user submitting incorrect data, remove the user entirely using
 * created privacy policy and added to sign-up form
 ##### Changes Since v2.0:
 * fixed submitted info for wrong candidate bug ⇒ this would occur when user doesn't fill out information for a preceding candidate
-  * fix: calculated proper index to read from candidates sheet using ItemResponse.getItem().getIndex()-2/2
+  * fix: calculated proper index to read from candidates sheet using ItemResponse.getItem().getIndex()-2/2 in Responses Formatting.gs
 ##### Potential Bugs:
 * two users submit likes/dislikes for each other within 10 seconds ⇒ two triggers might simultaneously modify same spreadsheet
   * note: this is a theoretical error, and in all the tests I conducted, submitting the two forms simultaneously functioned as intended
