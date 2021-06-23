@@ -45,7 +45,9 @@ function formatResponse(response, formatted, candidates) {
   for (var i = 0; i < items.length; i++) {
     var item = items[i];
     
-    var id_name = data[i];
+    var index = (item.getItem().getIndex()-2)/2;
+    console.log("index: "+index);
+    var id_name = data[index];
     var headers = item.getItem().asGridItem().getRows();
     var r = item.getResponse();
 
