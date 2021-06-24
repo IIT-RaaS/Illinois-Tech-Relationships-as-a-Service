@@ -36,13 +36,13 @@ Languages: Google Apps Script, JavaScript
     2. run createSignUpTrigger to link script to sign-up form
     3. authorize the script with necessary permissions
 #### Modifying User Information
-##### Modifying Sign-Up Information
+##### Modifying Sign-Up Information:
 1. update user information accordingly on the sign-up form linked spreadsheet
 2. remove the trigger associated with the user's existing matching form
 3. in Update Matching Form.gs,
     1. change the hawk ID in runUserUpdate to be that of the desired user
     2. run runUserUpdate
-##### Modifying Likes/Dislikes
+##### Modifying Likes/Dislikes:
 1. remove the row with likes and dislikes for the corresponding candidate from the "Unmatched" sheet in the user's likes/dislikes responses spreadsheet
 2. append the candidate's associated hawk ID and name to the end of the user's candidates spreadsheet
 3. perform a likes/dislikes submission on behalf of the user without entering any information (this runs the form update script)
