@@ -38,7 +38,6 @@ Languages: Google Apps Script, JavaScript
     2. run createSignUpTrigger to link script to sign-up form
     3. authorize the script with necessary permissions
 #### Modifying User Information
-To modify submitted user information, you (the developer) must do the following:
 ##### Modifying Sign-Up Information:
 1. update user information accordingly on the sign-up form linked spreadsheet
 2. remove the trigger associated with the user's existing matching form
