@@ -1,4 +1,4 @@
-### What kinds of information do we collect?
+### What kinds of personal information do we collect?
 We collect all information required for this service. This includes the following:
 1. Illinois Tech domain email (...@hawk.iit.edu)
 2. personal email
@@ -17,14 +17,6 @@ Through Google Forms:
 3. shown to potential match candidates during the "like"/"dislike" phase to aid in their decisions
 4. sent to matches upon a successful match
 5. mutual likes constitute a match
-
-General information regarding consumers that does not classify as "personal information" is not covered by this privacy policy and may be collected by the developers for public distribution. This is any information that cannot be directly tied to any consumer or used to indicate an individual's participation or lack thereof in this service. Examples of this information include the following:
-* number of total users
-* percentage of users by gender
-* percentage of users by interest in a relationship type
-* number of matches
-
-No anonymity will be breached in the collecting of such data, and developers will not view personal sign-up information nor likes/dislikes nor individual matches/rejections simply for the sake of collecting such data.
 
 ### What measures do we take to ensure data remains private?
 All the data mentioned above is stored only on the Google Drive account of the developer maintaining this service and is not shared with anyone under any circumstances aside from the exceptions specified in this privacy policy. Google encrypts all data-at-rest and data-in-transit, including the information collected. For more information, see https://cloud.google.com/security/encryption/default-encryption.
@@ -61,5 +53,14 @@ Given the following conditions:
 2. user A submits likes/dislikes for user B but user B has not yet submitted likes/dislikes for user A
 
 Under these conditions, user A will be able to modify likes/dislikes for user B because the previously-submitted likes/dislikes have not yet been processed. Changes to likes/dislikes can likewise be requested by reaching out to us on Instagram @iit.relationships or via email at iitrelationships@gmail.com.
+
+### Is there any data collected that is not subject to the above-stated conditions?
+General information regarding consumers that does not classify as "personal information" is not covered by this privacy policy and may be collected by the developers for public distribution. This is any information that cannot be directly tied to any consumer or used to indicate an individual's participation or lack thereof in this service. Examples of this information include the following:
+* number of total users
+* percentage of users by gender
+* percentage of users by interest in a relationship type
+* number of matches
+
+No anonymity will be breached in the collecting of such data, and developers will not view personal sign-up information nor likes/dislikes nor individual matches/rejections simply for the sake of collecting such data.
 
 Feel free to reach out to us on Instagram @iit.relationships or email us at iitrelationships@gmail.com with any questions or for clarification.
