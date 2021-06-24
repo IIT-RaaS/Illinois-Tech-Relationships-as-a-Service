@@ -39,7 +39,7 @@ Consumers can request a copy of their personal data (1-4) for viewing and modifi
 
 As of version 3.0, any information entered during sign-up can be modified by reaching out to us on Instagram @iit.relationships or via email at iitrelationships@gmail.com. However, consumers who modify their sign-up information will NOT be able to view or resubmit their likes/dislikes for potential candidates whose corresponding likes/dislikes have already been processed (matched or rejected). The implications of this are illustrated in the following example.
 Given the following conditions:
-1. user A originally requested only relationship type Friendship without Benefits and user B requested all relationship types
+1. user A originally requested only relationship type Friendship without Benefits, while user B requested all relationship types
 2. both users A and B submitted their likes/dislikes for each other and either matched or were rejected
 3. user A requests to add relationship type Relationships without Sex
 
