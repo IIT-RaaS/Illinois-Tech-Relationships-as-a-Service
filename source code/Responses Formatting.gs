@@ -57,7 +57,7 @@ function formatResponse(response, formatted, candidates) {
     console.log("%s with headers %s and responses %s", id_name, headers, r);
     
     addRow(id_name, headers, r, unmatched);
-    rm.push(i+1);
+    rm.push(index+1);
   }
 
   // we only remove at the end so it's easy to access candidate name by index before
