@@ -39,9 +39,9 @@ Consumers can request a copy of their personal data (1-4) for viewing and modifi
 
 As of version 3.0, any information entered during sign-up can be modified by reaching out to us on Instagram @iit.relationships or via email at iitrelationships@gmail.com. However, consumers who modify their sign-up information will NOT be able to view or resubmit their likes/dislikes for potential candidates whose corresponding likes/dislikes have already been processed (matched or rejected). The implications of this are illustrated in the following example.
 Given the following conditions:
-* user A originally requested only relationship type Friendship without Benefits and user B requested all relationship types
-* both users A and B submitted their likes/dislikes for each other and either matched or were rejected
-* user A requests to add relationship type Relationships without Sex
+1. user A originally requested only relationship type Friendship without Benefits and user B requested all relationship types
+2. both users A and B submitted their likes/dislikes for each other and either matched or were rejected
+3. user A requests to add relationship type Relationships without Sex
 
 Under these conditions, user A will no longer be able to view or submit likes/dislikes for user B despite having added a potential relationship type because the match or lack thereof has already been processed.
 
@@ -49,8 +49,8 @@ Additionally, any match emails already sent out to matches cannot be modified du
 
 As mentioned above, consumers will receive a form via personal email for submitting their likes/dislikes (5) for other potential match candidates. They can request a copy of their selected likes/dislikes, but due to our scripts immediately handling this information, we cannot guarantee modification (no undo). Therefore, consumers are encouraged to take extra care in correctly entering their likes/dislikes on their provided matching form, and this matching form is not to be shared with anyone. However, likes and dislikes CAN be resubmitted given that they have not yet been processed. This occurs when the potential relationship candidate in question has not yet submitted their corresponding likes/dislikes. The implications of this are illustrated in the following example.
 Given the following conditions:
-* users A and B are potential candidates
-* user A submits likes/dislikes for user B but user B has not yet submitted likes/dislikes for user A
+1. users A and B are potential candidates
+2. user A submits likes/dislikes for user B but user B has not yet submitted likes/dislikes for user A
 
 Under these conditions, user A will be able to modify likes/dislikes for user B because the previously-submitted likes/dislikes have not yet been processed. Changes to likes/dislikes can likewise be requested by reaching out to us on Instagram @iit.relationships or via email at iitrelationships@gmail.com.
 
