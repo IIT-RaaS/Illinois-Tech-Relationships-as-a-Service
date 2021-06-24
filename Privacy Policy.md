@@ -18,6 +18,14 @@ Through Google Forms:
 4. sent to matches upon a successful match
 5. mutual likes constitute a match
 
+General information regarding consumers that does not classify as "personal information" is not covered by this privacy policy and may be collected by the developers for public distribution. This is any information that cannot be directly tied to any consumer or used to indicate an individual's participation or lack thereof in this service. Examples of this information include the following:
+* number of total users
+* percentage of users by gender
+* percentage of users by interest in a relationship type
+* number of matches
+
+No anonymity will be breached in the collecting of such data, and developers will not view personal sign-up information nor likes/dislikes nor individual matches/rejections simply for the sake of collecting such data.
+
 ### What measures do we take to ensure data remains private?
 All the data mentioned above is stored only on the Google Drive account of the developer maintaining this service and is not shared with anyone under any circumstances aside from the exceptions specified in this privacy policy. Google encrypts all data-at-rest and data-in-transit, including the information collected. For more information, see https://cloud.google.com/security/encryption/default-encryption.
 
