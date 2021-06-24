@@ -134,8 +134,11 @@ function updateExistingUserCandidates(candidate) {
     if (ids_only.indexOf(id) != -1) {
       var form = FormApp.openById(serviced[id][0]);
       var candidates = SpreadsheetApp.openById(serviced[id][2]);
+
       console.log("Adding candidate to "+candidates.getName());
       candidates.appendRow(candidate);
+      // duplicates may occur on user sign-up info update
+      candidates.getDataRange().removeDuplicates();
 
       var [_, _, types, _, _, email, _, _] = searchDatabase(id);
       updateForm(form, candidates, types);
