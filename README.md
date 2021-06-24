@@ -55,7 +55,7 @@ To remove a user manually from the service, you (the developer) must do each of 
 * delete the row corresponding to the user's hawk ID in the "Serviced Users" spreadsheet
 * delete the folder with the user's hawk ID in "Matching Forms"
 #### Changelog
-##### Changes Since v1:
+##### Changes in v2.0:
 * closed sign-up form during processing (removes potential bugs for if another user signs up during processing)
 * updated code to support deprecated Rhino interpreter (JavaScript ES5)
   * Google Apps Script has a bug in its latest runtime ⇒ if one form submit trigger attempts to create another, it will be disabled
@@ -63,10 +63,10 @@ To remove a user manually from the service, you (the developer) must do each of 
 * added setRequireLogin(false) for matching (like/dislike) forms
 * added debugging (console.log) statements
 * created privacy policy and added to sign-up form
-##### Changes Since v2.0:
+##### Changes in v2.1:
 * fixed submitted info for wrong candidate bug ⇒ this would occur when user doesn't fill out information for a preceding candidate
   * fix: calculated proper index to read from candidates sheet using ItemResponse.getItem().getIndex()-2/2 in Responses Formatting.gs
-##### Changes Since v2.1:
+##### Changes in v3.0:
 * updating relationship types used to be extremely difficult and would compromise anonymity because it required recording the user's already submitted likes/dislikes, removing the user, signing them up again, and filling out matching forms on behalf of other users
   * it can now be accomplished easily using the steps in the "Modifying User Sign-Up Information" section above
 #### Potential Bugs:
