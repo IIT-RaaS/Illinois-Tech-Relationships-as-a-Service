@@ -62,7 +62,7 @@ In the event of a user submitting incorrect data, remove the user entirely using
     1. change the hawk ID in runUserUpdate to be that of the desired user
     2. run runUserUpdate
 
-Note: v3.0 is experimental and not in use by IIT RaaS until it undergoes further testing! Upon being approved, the Privacy Policy will be updated accordingly.
+Note: v3.0 is experimental and NOT currently in use by IIT RaaS until it undergoes further testing! Upon being approved, the Privacy Policy will be updated accordingly.
 ##### Potential Bugs:
 * two users submit likes/dislikes for each other within 10 seconds ⇒ two triggers might simultaneously modify same spreadsheet
   * note: this is a theoretical error, and in all the tests I conducted, submitting the two forms simultaneously functioned as intended
