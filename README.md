@@ -26,9 +26,9 @@ Languages: Google Apps Script, JavaScript
     1. restrict sign-up form to users of specific domain (iit.edu)
 4. in the Sign-Up Form folder, create a spreadsheet titled "Serviced Users"
 5. in Retrieve Folders and Files.gs,
-	1. finish implementation for getBaseIdHelper
-	2. run getBaseIdHelper to obtain base ID of the folder containing the service and update the base_id global variable
-	3. run runIdHelpers and update all other global variables accordingly
+    1. finish implementation for getBaseIdHelper
+    2. run getBaseIdHelper to obtain base ID of the folder containing the service and update the base_id global variable
+    3. run runIdHelpers and update all other global variables accordingly
 6. create a copy of the script for every suspected 19 users (20 triggers per script - 1 for sign-up form)
 7. in each copy, in general settings, uncheck "Enable Chrome V8 runtime" (see changes since version 1 below)
 8. in each copy, in Triggers.gs,
@@ -71,13 +71,13 @@ To remove a user manually from the service, you (the developer) must do each of 
   * it can now be accomplished easily using the steps in the "Modifying User Sign-Up Information" section above
 #### Potential Bugs:
 1. two users submit likes/dislikes for each other within 10 seconds ⇒ two triggers might simultaneously modify the same spreadsheet
-  * note: this is a theoretical error, and in all the tests I conducted, submitting the two forms simultaneously functioned as intended
-  * workaround: (see note) I expect this to be very rare, so if I get a script error, I'll manually add the users back to each other's candidates lists
-  * future development: implement a form execution queue (this will be extremely difficult with multiple copies of same script)
+    * note: this is a theoretical error, and in all the tests I conducted, submitting the two forms simultaneously functioned as intended
+    * workaround: (see note) I expect this to be very rare, so if I get a script error, I'll manually add the users back to each other's candidates lists
+    * future development: implement a form execution queue (this will be extremely difficult with multiple copies of same script)
 2. fail to read from serviced users spreadsheet within 30 secs
-  * note: this occurred once during the early stages of debugging version 1.0 and has not occurred since
-  * workaround: (see note) I expect this to be very rare, so if I get a script error, I'll delete the last user in the serviced users spreadsheet and manually rerun main in Sign Ups.gs. The script currently skips that user on subsequent runs if it encounters this error
+    * note: this occurred once during the early stages of debugging version 1.0 and has not occurred since
+    * workaround: (see note) I expect this to be very rare, so if I get a script error, I'll delete the last user in the serviced users spreadsheet and manually rerun main in Sign Ups.gs. The script currently skips that user on subsequent runs if it encounters this error
 3. script execution time exceeds Google's daily quota
-  * note: this would require a ridiculously large number of form submissions to occur, thus rendering it infeasible and only a theoretical error
-  * implications: form submissions would not be processed, new users would be unable to sign up that day, existing users would continue to see the same candidates despite having submitted likes/dislikes
-  * workaround: none possible - scripts will resume execution normally the following day
+    * note: this would require a ridiculously large number of form submissions to occur, thus rendering it infeasible and only a theoretical error
+    * implications: form submissions would not be processed, new users would be unable to sign up that day, existing users would continue to see the same candidates despite having submitted likes/dislikes
+    * workaround: none possible - scripts will resume execution normally the following day
