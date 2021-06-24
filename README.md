@@ -75,7 +75,7 @@ To remove a user manually from the service, you (the developer) must do each of 
 1. two users submit likes/dislikes for each other within 10 seconds ⇒ two triggers might simultaneously modify the same spreadsheet
     * note: this is a theoretical error, and in all the tests I conducted, submitting the two forms simultaneously functioned as intended
     * workaround: (see note) I expect this to be very rare, so if I get a script error, I'll manually add the users back to each other's candidates lists
-    * future development: implement a form execution queue (this will be extremely difficult with multiple copies of same script)
+    * future development: implement a form execution queue (this will be extremely difficult if not impossible with multiple copies of same script)
 2. fail to read from serviced users spreadsheet within 30 secs
     * note: this occurred once during the early stages of debugging version 1.0 and has not occurred since
     * workaround: (see note) I expect this to be very rare, so if I get a script error, I'll delete the last user in the serviced users spreadsheet and manually rerun main in Sign Ups.gs. The script currently skips that user on subsequent runs if it encounters this error
