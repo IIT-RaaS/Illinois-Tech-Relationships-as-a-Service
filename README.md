@@ -19,7 +19,7 @@ At any given time, the only people with potential to access the information you 
 
 ### Implementation
 Languages: Google Apps Script, JavaScript
-##### Service Setup:
+#### Service Setup:
 1. create an alias (iitrelationships@gmail.com) for your hawk account (...@hawk.iit.edu)
 2. create two folders: "Matching Forms" and "Sign-Up Form"
 3. place sign-up form in the Sign-Up Form folder and create a spreadsheet for responses (with default name)
@@ -35,14 +35,26 @@ Languages: Google Apps Script, JavaScript
     1. change the conditional in onSignUp accordingly to service 19 users
     2. run createSignUpTrigger to link script to sign-up form
     3. authorize the script with necessary permissions
-##### Removing a User:
+#### Modifying User Information
+##### Modifying Sign-Up Information
+1. update user information accordingly on the sign-up form linked spreadsheet
+2. remove the trigger associated with the user's existing matching form
+3. in Update Matching Form.gs,
+    1. change the hawk ID in runUserUpdate to be that of the desired user
+    2. run runUserUpdate
+##### Modifying Likes/Dislikes
+1. remove the row with likes and dislikes for the corresponding candidate from the "Unmatched" sheet in the user's likes/dislikes responses spreadsheet
+2. append the candidate's associated hawk ID and name to the end of the user's candidates spreadsheet
+3. perform a likes/dislikes submission on behalf of the user without entering any information (this runs the form update script)
+
+Note: this action can only be performed if the match has not yet been processed. It cannot be performed if the user's likes/dislikes are located in the "Matched" or "Rejected" sheets of the user's likes/dislikes responses spreadsheet.
+#### Removing a User:
 To remove a user manually from the service, you (the developer) must do each of the following:
 * open the sign-up form and delete the user's response
 * delete the row corresponding to the user's response in the sign-up form spreadsheet
 * delete the row corresponding to the user's hawk ID in the "Serviced Users" spreadsheet
 * delete the folder with the user's hawk ID in "Matching Forms"
-
-In the event of a user submitting incorrect data, remove the user entirely using the above procedure and ask them to resubmit the form
+#### Changelog
 ##### Changes Since v1:
 * closed sign-up form during processing (removes potential bugs for if another user signs up during processing)
 * updated code to support deprecated Rhino interpreter (JavaScript ES5)
@@ -56,14 +68,8 @@ In the event of a user submitting incorrect data, remove the user entirely using
   * fix: calculated proper index to read from candidates sheet using ItemResponse.getItem().getIndex()-2/2 in Responses Formatting.gs
 ##### Changes Since v2.1:
 * updating relationship types used to be extremely difficult and would compromise anonymity because it required recording the user's already submitted likes/dislikes, removing the user, signing them up again, and filling out matching forms on behalf of other users
-  * it can now be accomplished easily with the following steps:
-1. update user information accordingly on the sign-up form linked spreadsheet
-2. in Update Matching Form.gs,
-    1. change the hawk ID in runUserUpdate to be that of the desired user
-    2. run runUserUpdate
-
-Note: v3.0 is experimental and NOT currently in use by IIT RaaS until it undergoes further testing! Upon being approved, the Privacy Policy will be updated accordingly.
-##### Potential Bugs:
+  * it can now be accomplished easily using the steps in the "Modifying User Sign-Up Information" above
+#### Potential Bugs:
 * two users submit likes/dislikes for each other within 10 seconds ⇒ two triggers might simultaneously modify same spreadsheet
   * note: this is a theoretical error, and in all the tests I conducted, submitting the two forms simultaneously functioned as intended
   * workaround: (see note) I expect this to be very rare, so if I get a script error, I'll manually add the users back to each other's candidates lists
