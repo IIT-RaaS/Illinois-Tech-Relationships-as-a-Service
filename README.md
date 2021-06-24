@@ -71,7 +71,7 @@ To remove a user manually from the service, you (the developer) must do each of 
 ##### Changes in v3.0:
 * updating relationship types used to be extremely difficult and would compromise anonymity because it required recording the user's already submitted likes/dislikes, removing the user, signing them up again, and filling out matching forms on behalf of other users
   * it can now be accomplished easily using the steps in the "Modifying User Sign-Up Information" section above
-#### Potential Bugs:
+### Potential Bugs
 1. two users submit likes/dislikes for each other within 10 seconds ⇒ two triggers might simultaneously modify the same spreadsheet
     * note: this is a theoretical error, and in all the tests I conducted, submitting the two forms simultaneously functioned as intended
     * workaround: (see note) I expect this to be very rare, so if I get a script error, I'll manually add the users back to each other's candidates lists
