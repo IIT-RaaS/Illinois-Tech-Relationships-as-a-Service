@@ -55,7 +55,7 @@ In the event of a user submitting incorrect data, remove the user entirely using
 * fixed submitted info for wrong candidate bug ⇒ this would occur when user doesn't fill out information for a preceding candidate
   * fix: calculated proper index to read from candidates sheet using ItemResponse.getItem().getIndex()-2/2 in Responses Formatting.gs
 ##### Changes Since v2.1:
-* updating relationship types used to be extremely difficult because it required removing the user, signing up again, and filling out matching forms on behalf of other users
+* updating relationship types used to be extremely difficult and would compromise anonymity because it required recording the user's already submitted likes/dislikes, removing the user, signing them up again, and filling out matching forms on behalf of other users
   * it can now be accomplished easily with the following steps:
 1. update user information accordingly on the sign-up form linked spreadsheet
 2. in Update Matching Form.gs,
