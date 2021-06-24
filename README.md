@@ -17,7 +17,7 @@ Upon matching with someone, defined as "you liking them" and "them liking you ba
 
 At any given time, the only people with potential to access the information you provide will be the two students at the Illinois Institute of Technology who have developed this service, and we assure you that we will not view or use this information for personal gain. We don't have the incentive to, and our putting time into setting up this service should indicate to you that we'd like to remain as trustworthy as possible to encourage its use. We will not have access to your personal messages with matches, as these will be on Discord, which encrypts all data-in-transit.
 
-Please refer to our [Privacy Policy](/Privacy%20Policy.md) for further information about how your data is processed and safeguarded as well as for procedures on how to modify your submissions. Reach out to us on Instagram @iit.relationships or email us at iitrelationships@gmail.com with questions or concerns at any time.
+Please refer to our [Privacy Policy](/Privacy%20Policy.md) for further information on how your data is processed and safeguarded as well as for procedures on how to modify your submissions. Reach out to us on Instagram @iit.relationships or email us at iitrelationships@gmail.com with questions or concerns at any time.
 
 ### Implementation
 Languages: Google Apps Script, JavaScript
