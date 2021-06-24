@@ -80,6 +80,6 @@ To remove a user manually from the service, you (the developer) must do each of 
     * note: this occurred once during the early stages of debugging version 1.0 and has not occurred since
     * workaround: (see note) I expect this to be very rare, so if I get a script error, I'll delete the last user in the serviced users spreadsheet and manually rerun main in Sign Ups.gs. The script currently skips that user on subsequent runs if it encounters this error
 3. script execution time exceeds Google's daily quota
-    * note: this would require a ridiculously large number of form submissions to occur, thus rendering it infeasible and only a theoretical error
+    * note: this would require a ridiculously large number of form submissions to occur, rendering it infeasible and only a theoretical error
     * implications: form submissions would not be processed, new users would be unable to sign up that day, existing users would continue to see the same candidates despite having submitted likes/dislikes
     * workaround: none possible - scripts will resume execution normally the following day
