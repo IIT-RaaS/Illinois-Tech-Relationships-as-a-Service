@@ -21,7 +21,7 @@ Please refer to our [Privacy Policy](/Privacy%20Policy.md) for further informati
 
 ### Implementation
 Languages: Google Apps Script, JavaScript
-#### Service Setup:
+#### Service Setup
 1. create an alias (iitrelationships@gmail.com) for your hawk account (...@hawk.iit.edu)
 2. create two folders: "Matching Forms" and "Sign-Up Form"
 3. place sign-up form in the Sign-Up Form folder and create a spreadsheet for responses (with default name)
@@ -50,7 +50,7 @@ Languages: Google Apps Script, JavaScript
 3. perform a likes/dislikes submission on behalf of the user without entering any information (this runs the form update script)
 
 Note: this action can only be performed if the match has not yet been processed. It cannot be performed if the user's likes/dislikes are located in the "Matched" or "Rejected" sheets of the user's likes/dislikes responses spreadsheet.
-#### Removing a User:
+#### Removing a User
 To remove a user manually from the service, you (the developer) must do each of the following:
 * open the sign-up form and delete the user's response
 * delete the row corresponding to the user's response in the sign-up form spreadsheet
