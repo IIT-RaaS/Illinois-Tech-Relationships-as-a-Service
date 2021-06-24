@@ -55,7 +55,7 @@ Given the following conditions:
 Under these conditions, user A will be able to modify likes/dislikes for user B because the previously-submitted likes/dislikes have not yet been processed. Changes to likes/dislikes can likewise be requested by reaching out to us on Instagram @iit.relationships or via email at iitrelationships@gmail.com.
 
 ### Is there any data collected that is not subject to the above-stated conditions?
-General information regarding consumers that does not classify as "personal information" is not covered by this privacy policy and may be collected by the developers for public distribution. This is any information that cannot be directly tied to any consumer or used to indicate an individual's participation or lack thereof in this service. Examples of this information include the following:
+General information regarding consumers that does not classify as "personal information" is not covered by this privacy policy and may be collected by the developers for public distribution. This is any information that cannot be directly tied to any consumer nor used to indicate an individual's participation or lack thereof in this service. Examples of this information include the following:
 * number of total users
 * percentage of users by gender
 * percentage of users by interest in a relationship type
