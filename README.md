@@ -54,6 +54,15 @@ In the event of a user submitting incorrect data, remove the user entirely using
 ##### Changes Since v2.0:
 * fixed submitted info for wrong candidate bug ⇒ this would occur when user doesn't fill out information for a preceding candidate
   * fix: calculated proper index to read from candidates sheet using ItemResponse.getItem().getIndex()-2/2 in Responses Formatting.gs
+##### Changes Since v2.1:
+* updating relationship types used to be extremely difficult because it required removing the user, signing up again, and filling out matching forms on behalf of other users
+  * it can now be accomplished easily with the following steps:
+1. update user information accordingly on the sign-up form linked spreadsheet
+2. in Update Matching Form.gs,
+    1. change the hawk ID in runUserUpdate to be that of the desired user
+    2. run runUserUpdate
+
+Note: v3.0 is experimental and not in use by IIT RaaS until it undergoes further testing! Upon being approved, the Privacy Policy will be updated accordingly.
 ##### Potential Bugs:
 * two users submit likes/dislikes for each other within 10 seconds ⇒ two triggers might simultaneously modify same spreadsheet
   * note: this is a theoretical error, and in all the tests I conducted, submitting the two forms simultaneously functioned as intended
