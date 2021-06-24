@@ -27,7 +27,7 @@ function updateUser(id) {
   var [_, formatted, _] = getFilesInFolder(user_folder);
   
   var skip = [];
-  var sheets = ["Unmatched", "Matched", "Rejected"];
+  var sheets = ["Matched", "Rejected"];
   sheets.forEach(function(sheet_name) {
     var sheet = formatted.getSheetByName(sheet_name);
     var data = sheet.getDataRange().getValues();
